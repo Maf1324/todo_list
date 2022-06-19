@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+:root {
+    --main-color: #63cf63;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--main-color);
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    padding: 1rem;
+    background-color: #fff;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-radius: 5px;
+}
+
+.title,
+.new_todo_container {
+    align-self: center;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+    text-align: center;
+    transition: background 100ms ease;
+}
+
+.new_todo_container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.todo_input {
+    /* background-color: #888; */
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    border-radius: 3px;
+    border: 1px solid var(--main-color);
+    outline: none;
+}
+
+.btn_add_todo {
+    padding: 0.90rem 2rem;
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    color: white;
+}
+
+.btn_add_todo:active {
+    background-color: #fff;
+    color: var(--main-color);
+}
+
+.todo_list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.btn_del_todo {
+    width: 1.5rem;
+    aspect-ratio: 1 / 1;
+    text-align: center;
+    margin-inline-start: 1.5rem;
+    border-radius: 50%;
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+}
+
+.btn_del_todo:active {
+    background-color: red;
+    color: white;
+}
+
+.todo {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.todo::before {
+    content: "*";
+    color: red;
+}
