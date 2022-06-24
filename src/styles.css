@@ -102,8 +102,3 @@ body {
     align-items: center;
     font-size: 1.3rem;
 }
-
-.todo::before {
-    content: "*";
-    color: red;
-}
